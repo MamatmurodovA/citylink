@@ -3,4 +3,11 @@
         <label for="">FIO</label>
         <input type="fio">
     </div>
+    {% for service in services %}
+       <div class="form-group">
+            <label for="">{{ service.title }}</label>
+           <div> Rank: <input type="text" name="rank"></div>
+        </div>
+    {% endfor %}
+
 </form>

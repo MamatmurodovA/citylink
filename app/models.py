@@ -25,5 +25,5 @@ class Service(models.Model):
 
 class ServiceRank(models.Model):
     survey = models.ForeignKey(Survey, on_delete=models.SET_NULL, null=True)
-    service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True)
+    service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True, related_name='ranks')
     rank = models.PositiveIntegerField()
